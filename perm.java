@@ -10,8 +10,14 @@ public class perm {
 	ArrayList<String> oper;
 	ArrayList<String> list;
 	public static void main(String[] args) {
-		perm p = new perm();
-		p.permute("ankit");
+		perm p = new perm("ankit");
+		p.permute(p.list.get(0));
+		System.out.println(p.list.size()+ "");
+	}
+	public perm(String inp)
+	{
+		list = new ArrayList<String>();
+		list.add(inp);
 	}
 	static public long fact(long n)
 	{
@@ -23,19 +29,13 @@ public class perm {
 	}
 	 public void permute(String s)
 	{
-		
 		inp = strg.StringtoList(s);
 		oper = (ArrayList<String>) strg.copylist(inp);
-		System.out.println(oper.size()+"");
-		
-		list = new ArrayList<String>();
-		list.add(s);
-			for(int j = oper.size()-1;j>-1;j--)
+			for(int j = oper.size()-1;j>0;j--)
 			{
 				String temp2 = oper.remove(j);
-				String temp = oper.remove(j);
 				oper.add(j-1 , temp2);
-				oper.add(j , temp);
+				//oper.add(j , temp);
 				String g = strg.listtostring(oper);
 				if(!list.contains(g))
 				{
