@@ -82,6 +82,15 @@ public class strg {
 		}
 		return retlist;
 	}
+          public static String listtostring(ArrayList<String> list)
+        {
+                String s="";
+                for(int i = 0;i<list.size();i++)
+                {
+                    s = s+ list.get(i);
+                }
+                return s;
+        }
 	public static void main(String[] args) {
 		int n=10;
 		strg s = new strg();
