@@ -82,15 +82,24 @@ public class strg {
 		}
 		return retlist;
 	}
-          public static String listtostring(ArrayList<String> list)
-        {
-                String s="";
-                for(int i = 0;i<list.size();i++)
-                {
-                    s = s+ list.get(i);
-                }
-                return s;
-        }
+	public static String listtostring(ArrayList<String> list)
+	{
+		String s="";
+		for(int i = 0;i<list.size();i++)
+		{
+			s = s+ list.get(i);
+		}
+		return s;
+	}
+	public static String reverse(String s)
+	{
+		String d= "";
+		for (int i= s.length()-1;i>=0;i--)
+		{
+			d= d + s.charAt(i);
+		}
+		return d;
+	}
 	public static void main(String[] args) {
 		int n=10;
 		strg s = new strg();
@@ -111,4 +120,12 @@ public class strg {
 			System.out.println(a.get(h));
 		}
 	}
+	public static void displist(ArrayList<String> s)
+	{
+		for(int i=0;i<s.size();i++)
+		{
+			System.out.println(s.get(i));
+		}
+	}
+	
 }
